@@ -68,3 +68,36 @@ class PruebaPersona{
 
  //void al utiliazar void simplemete ejecuta una instruccionde lo que hat dentro de el metodo sin devolver
  //ningun valor
+
+
+ /*
+Podemos organizar los métodos en tres tipos, teniendo en cuenta aspectos sintácticos y semánticos:
+ Constructores. Métodos que inicializan la instancia
+ Métodos genéricos. Realizan acciones utilizando los atributos
+ Métodos para accesos directo a los atributos (getters & setters). Estos métodos son opcionales y
+suelen utilizarse más en clases de tipo “entidad”, es decir, que tienen persistencia en bases de
+datos, o en los “beans”, donde tienen una correspondencia con formularios. Aunque estos
+métodos son realmente generales, los distinguimos por separado por tener unas normas
+concretas de estilo 
+  */
+
+  /*Constructores
+   * Los constructores son métodos especiales que reúnen las tareas de inicialización de los objetos de una
+clase; por lo tanto, el constructor establece el estado inicial de todos los objetos que se instancian.
+No es obligatorio definir constructores, si no se realiza, existe un constructor por defecto sin parámetros.
+La ejecución del constructor es implícita a la creación de una instancia.
+La restricción sintáctica del constructor es que debe llamarse igual que la clase y no devuelve ningún tipo
+ni lleva la palabra void.
+Como ejemplo añadimos un constructor a la clase Punto:
+public class Punto{
+private int x,y;
+public Punto(int x, int y){}
+...
+}
+
+   */
+
+
+/*Sobrecarga de metodos
+ * 
+ */
