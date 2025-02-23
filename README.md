@@ -9,6 +9,9 @@ Los objetos son unidades fundamentales que representan entidades del mundo real 
 - **Identidad:** Cada objeto es único, incluso si comparte atributos con otros.
 - **Comportamientos:** También llamados **métodos**, son las acciones que un objeto puede realizar.
 
-## **Clase**
+## **Clases**
 
 Una **clase** es una plantilla o molde que define las propiedades y comportamientos que tendrán los objetos creados a partir de ella. A través de la **abstracción**, se identifican las características esenciales de un objeto para diseñar la clase correspondiente. De este modo, la clase actúa como un modelo base que permite instanciar múltiples objetos con atributos y métodos específicos.
+
+
+### **Diagramas UML** 
