@@ -14,4 +14,11 @@ Los objetos son unidades fundamentales que representan entidades del mundo real 
 Una **clase** es una plantilla o molde que define las propiedades y comportamientos que tendrán los objetos creados a partir de ella. A través de la **abstracción**, se identifican las características esenciales de un objeto para diseñar la clase correspondiente. De este modo, la clase actúa como un modelo base que permite instanciar múltiples objetos con atributos y métodos específicos.
 
 
-### **Diagramas UML** 
+### **Diagramas UML**
+
+Digrama el cual utiliza el Lenguaje Unificado de Modelado, se crean con la finalidad de entender la arquitectura del codigo
+- **Estructura**
+![image](https://github.com/user-attachments/assets/4dda5642-c15b-4700-bc0d-ec0e0be45714)
+
+- **Ejemplo**
+  ![image](https://github.com/user-attachments/assets/05ce6a06-3c31-4328-ad2b-0dadf93c83d1)
