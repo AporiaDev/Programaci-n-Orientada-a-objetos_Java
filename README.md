@@ -23,5 +23,5 @@ Digrama el cual utiliza el Lenguaje Unificado de Modelado, se crean con la final
 </p>
 - **Ejemplo**
 <p align = "center"
-  ![image](https://github.com/user-attachments/assets/05ce6a06-3c31-4328-ad2b-0dadf93c83d1)
+       ![image](https://github.com/user-attachments/assets/05ce6a06-3c31-4328-ad2b-0dadf93c83d1)
 </p>
