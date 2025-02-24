@@ -13,6 +13,10 @@ Los objetos son unidades fundamentales que representan entidades del mundo real 
 
 Una **clase** es una plantilla o molde que define las propiedades y comportamientos que tendrán los objetos creados a partir de ella. A través de la **abstracción**, se identifican las características esenciales de un objeto para diseñar la clase correspondiente. De este modo, la clase actúa como un modelo base que permite instanciar múltiples objetos con atributos y métodos específicos.
 
+```java
+
+```
+
 
 ### **Diagramas UML**
 
@@ -22,5 +26,12 @@ Digrama el cual utiliza el Lenguaje Unificado de Modelado, se crean con la final
 ![image](https://github.com/user-attachments/assets/4dda5642-c15b-4700-bc0d-ec0e0be45714)
 
 - **Ejemplo**
+  
 ![image](https://github.com/user-attachments/assets/05ce6a06-3c31-4328-ad2b-0dadf93c83d1)
+
+## **Modularidad**
+
+La modularidad en Java se refiere a la capacidad de dividir un programa en partes más pequeñas, independientes y reutilizables llamadas módulos. Cada módulo contiene clases, interfaces y otros recursos que cumplen una función específica. Esta característica facilita el mantenimiento, la escalabilidad y la colaboración en proyectos grandes.
+
+## **Como se declara un objeto**
 
