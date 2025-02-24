@@ -18,10 +18,10 @@ Una **clase** es una plantilla o molde que define las propiedades y comportamien
 
 Digrama el cual utiliza el Lenguaje Unificado de Modelado, se crean con la finalidad de entender la arquitectura del codigo
 - **Estructura**
-<div align = "center"  
+<p align = "center"  
 ![image](https://github.com/user-attachments/assets/4dda5642-c15b-4700-bc0d-ec0e0be45714)
-</div>
+</p>
 - **Ejemplo**
-<div align = "center"
+<p align = "center"
   ![image](https://github.com/user-attachments/assets/05ce6a06-3c31-4328-ad2b-0dadf93c83d1)
-</div>
+</p>
