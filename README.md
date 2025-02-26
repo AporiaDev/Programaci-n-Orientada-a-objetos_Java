@@ -79,5 +79,4 @@ Digrama el cual utiliza el Lenguaje Unificado de Modelado, se crean con la final
 
 La modularidad en Java se refiere a la capacidad de dividir un programa en partes más pequeñas, independientes y reutilizables llamadas módulos. Cada módulo contiene clases, interfaces y otros recursos que cumplen una función específica. Esta característica facilita el mantenimiento, la escalabilidad y la colaboración en proyectos grandes.
 
-## **Como se declara un objeto**
 
