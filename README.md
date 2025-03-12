@@ -62,7 +62,9 @@ public class Main {
         miCoche.detener();
     }
 }
-
+### Constructor
+Coche miCoche = new Coche("Toyota", "Corolla", 2020)
+Un constructor en Java es un bloque especial de código que se ejecuta cuando se crea una nueva instancia (u objeto) de una clase. Es un tipo de método que se utiliza para inicializar el objeto recién creado, es decir, asignar valores iniciales a las variables de instancia de la clase.
 ```
 ### **Diagramas UML**
 
