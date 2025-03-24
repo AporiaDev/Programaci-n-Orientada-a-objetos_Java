@@ -55,7 +55,7 @@ public class Main {
     public static void main(String[] args) {
         // Creación de un objeto de la clase Coche
         Coche miCoche = new Coche("Toyota", "Corolla", 2020);
-        
+        // el metodo conastructo siempre esta después del  New
         // Uso de los métodos del objeto
         miCoche.mostrarDetalles();
         miCoche.arrancar();
