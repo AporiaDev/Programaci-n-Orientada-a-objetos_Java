@@ -193,3 +193,66 @@ public class Configuracion {
 
 ## **Sobrecarga**
 
+También concidca como **overloading**, permite que un metodo tenga el mismo nombre pero con distintos parametros.Es una forma de hacer que el código sea más flexible y legible.
+
+Cuando aplico sobre carga en un constructor puedo instanciar un objeto con diferentes parametros, lo cual permite no abstenerse a crear objetos de un solo tipo.
+
+```java
+public class Persona {
+
+    private String nombre;
+    private int edad;
+
+    // Constructor por defecto
+    public Persona() {
+        this.nombre = "Desconocido";
+        this.edad = 0;
+    }
+
+    // Constructor con un parámetro
+    public Persona(String nombre) {
+        this.nombre = nombre;
+        this.edad = 0; // Edad predeterminada
+    }
+
+    // Constructor con dos parámetros
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    // Método sobrecargado para mostrar información de la persona
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + this.nombre + ", Edad: " + this.edad);
+    }
+
+    // Método sobrecargado para mostrar la información con un saludo adicional
+    public void mostrarInformacion(String saludo) {
+        System.out.println(saludo + " Nombre: " + this.nombre + ", Edad: " + this.edad);
+    }
+
+    // Método sobrecargado para mostrar solo el nombre
+    public void mostrarInformacion(boolean mostrarNombreSolo) {
+        if (mostrarNombreSolo) {
+            System.out.println("Nombre: " + this.nombre);
+        } else {
+            System.out.println("Nombre: " + this.nombre + ", Edad: " + this.edad);
+        }
+    }
+
+    public static void main(String[] args) {
+        // Crear objetos utilizando diferentes constructores
+        Persona persona1 = new Persona();                       // Llama al constructor sin parámetros
+        Persona persona2 = new Persona("Carlos");               // Llama al constructor con un parámetro
+        Persona persona3 = new Persona("Ana", 25);              // Llama al constructor con dos parámetros
+
+        // Llamadas a métodos sobrecargados
+        persona1.mostrarInformacion();               // Muestra "Nombre: Desconocido, Edad: 0"
+        persona2.mostrarInformacion("¡Hola! ");      // Muestra "¡Hola! Nombre: Carlos, Edad: 0"
+        persona3.mostrarInformacion(true);           // Muestra "Nombre: Ana"
+        persona3.mostrarInformacion(false);          // Muestra "Nombre: Ana, Edad: 25"
+    }
+}
+
+
+```
