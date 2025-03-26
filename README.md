@@ -256,3 +256,75 @@ public class Persona {
 
 
 ```
+## Encapsulamiento
+
+Técnica por la cual se ocultan los detaller internos de una clase y proporcinan acceso a detalles a través de métodos públicos. Ayuda a proteger datos, mejorar la seguridad , aislar el código y facilitar la depuración y mantenimiento
+
+- **Atributos privados:** Son generalvente declarados con **private** para evitar su acceso directo desde fuera de la clase.
+- **Metodos públicos:** Los métodos que permiten acceder y modificar esos atributos son **public**. Los dos tipos de métodos más comunes son los **getters**(Permiten leer el valor de un atributo) y **setters**(Permiten modificar el valor de un atributo)
+
+```java
+public class Persona {
+
+    // Atributos privados
+    private String nombre;
+    private int edad;
+
+    // Constructor de la clase
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    // Getter para obtener el nombre
+    public String getNombre() {
+        return nombre;
+    }
+
+    // Setter para modificar el nombre
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    // Getter para obtener la edad
+    public int getEdad() {
+        return edad;
+    }
+
+    // Setter para modificar la edad
+    public void setEdad(int edad) {
+        if (edad >= 0) {  // Validación antes de modificar la edad
+            this.edad = edad;
+        } else {
+            System.out.println("La edad no puede ser negativa.");
+        }
+    }
+
+    // Método para mostrar la información de la persona
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + nombre + ", Edad: " + edad);
+    }
+
+    public static void main(String[] args) {
+        // Crear un objeto de la clase Persona
+        Persona persona1 = new Persona("Carlos", 30);
+
+        // Acceder a los atributos a través de los métodos getters
+        System.out.println("Nombre inicial: " + persona1.getNombre());
+        System.out.println("Edad inicial: " + persona1.getEdad());
+
+        // Modificar los atributos a través de los métodos setters
+        persona1.setNombre("Juan");
+        persona1.setEdad(35);
+
+        // Mostrar la información después de modificarla
+        persona1.mostrarInformacion();
+
+        // Intentar modificar la edad con un valor negativo
+        persona1.setEdad(-5);  // Esto imprimirá un mensaje de error
+    }
+}
+
+
+```
+   
