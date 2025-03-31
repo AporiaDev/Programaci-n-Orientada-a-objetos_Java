@@ -327,4 +327,140 @@ public class Persona {
 
 
 ```
-   
+# Stack vs Heap
+
+En la ejecución de programas, existen dos áreas principales de memoria utilizadas: **Stack (Pila)** y **Heap (Montículo)**. Cada una tiene características distintas y se usa en diferentes escenarios.
+
+## 📌 Stack (Pila)
+- Se utiliza para **almacenar variables locales y llamadas a funciones**.
+- Su tamaño es **limitado** y administrado automáticamente por el sistema operativo.
+- Sigue un esquema **LIFO (Last In, First Out)**.
+- La memoria se **asigna y libera automáticamente** cuando las funciones entran y salen del contexto.
+- Es **más rápida** que el heap debido a su estructura organizada.
+
+### 🔹 Ejemplo en Java:
+```java
+public class Main {
+    void funcion() {
+        int x = 10;  // Se almacena en el stack
+    }
+}
+```
+
+## 📌 Heap (Montículo)
+- Se usa para **asignación dinámica de memoria**.
+- Su tamaño es **mucho mayor** que el stack, pero su acceso es más lento.
+- La memoria debe **asignarse y liberarse manualmente** (en Java, el recolector de basura se encarga de liberar la memoria).
+- Puede fragmentarse si no se gestiona correctamente.
+
+### 🔹 Ejemplo en Java:
+```java
+public class Main {
+    public static void main(String[] args) {
+        Persona persona = new Persona("Juan");  // Se almacena en el heap
+    }
+}
+
+class Persona {
+    String nombre;
+    Persona(String nombre) {
+        this.nombre = nombre;
+    }
+}
+```
+
+# **Clases Anidadas**
+
+Una clase puede definirse dentro de otra clase. La clase exterior se conoce como **clase padre**, y la clase dentro de ella es la **clase anidada**.
+
+## 📌 Tipos de Clases Anidadas
+En Java, las clases anidadas se dividen en dos tipos principales:
+
+### 🔹 Clases Internas
+Son clases definidas dentro de otra clase sin usar la palabra clave `static`. Tienen acceso a los miembros de la clase exterior, incluyendo los privados.
+
+#### **1. Clases Internas Normales**
+Son clases que se definen dentro de otra clase pero fuera de cualquier método.
+```java
+class Externa {
+    private String mensaje = "Hola desde la clase interna";
+    
+    class Interna {
+        void mostrarMensaje() {
+            System.out.println(mensaje); // Puede acceder a los miembros privados
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Externa externa = new Externa();
+        Externa.Interna interna = externa.new Interna();
+        interna.mostrarMensaje();
+    }
+}
+```
+
+#### **2. Clases Locales a un Método**
+Son clases definidas dentro de un método y solo pueden ser utilizadas dentro de ese método.
+```java
+class Externa {
+    void metodoExterno() {
+        class Interna {
+            void mensaje() {
+                System.out.println("Clase interna dentro de un método");
+            }
+        }
+        Interna interna = new Interna();
+        interna.mensaje();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        new Externa().metodoExterno();
+    }
+}
+```
+
+#### **3. Clases Internas Anónimas**
+Son clases sin nombre que se declaran y se instancian en una única expresión.
+```java
+abstract class Saludo {
+    abstract void mensaje();
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Saludo saludo = new Saludo() { // Clase interna anónima
+            void mensaje() {
+                System.out.println("Hola desde una clase interna anónima");
+            }
+        };
+        saludo.mensaje();
+    }
+}
+```
+
+### 🔹 Clases Estáticas Anidadas
+Son clases que se definen dentro de otra clase usando `static`. No tienen acceso directo a los miembros de la clase externa, a menos que sean estáticos.
+```java
+class Externa {
+    static class Interna {
+        void mensaje() {
+            System.out.println("Clase estática anidada");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Externa.Interna interna = new Externa.Interna();
+        interna.mensaje();
+    }
+}
+```
+
+
+
+
