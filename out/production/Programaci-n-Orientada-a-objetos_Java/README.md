@@ -64,7 +64,18 @@ public class Main {
 }
 
 ```
+### Aspectos importantes
 
+## Declaración de un objeto
+
+```java
+Persona persona1 = new Persona("Juan", 25);
+```
+- Persona : se refiere al molde en donde se administrara memoria para persona1 la cual contiene el objeto.
+- persona1 : No contiene el objeto, si no que hace referencia a la ubicación del objeto en el espacio de memoria.
+- = : Apunta al objeto recien creado en la memoria.
+- new :  Reserva espacio en la memoria para el nuevo objeto
+- Persona("Juan" , 25) = llama al constructor de la clase Persona
 ### Constructor
 Coche miCoche = new Coche("Toyota", "Corolla", 2020)
 
