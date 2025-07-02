@@ -342,14 +342,14 @@ public class Persona {
 
 En la ejecución de programas, existen dos áreas principales de memoria utilizadas: **Stack (Pila)** y **Heap (Montículo)**. Cada una tiene características distintas y se usa en diferentes escenarios.
 
-## 📌 Stack (Pila)
+##  Stack (Pila)
 - Se utiliza para **almacenar variables locales y llamadas a funciones**.
 - Su tamaño es **limitado** y administrado automáticamente por el sistema operativo.
 - Sigue un esquema **LIFO (Last In, First Out)**.
 - La memoria se **asigna y libera automáticamente** cuando las funciones entran y salen del contexto.
 - Es **más rápida** que el heap debido a su estructura organizada.
 
-### 🔹 Ejemplo en Java:
+###  Ejemplo en Java:
 ```java
 public class Main {
     void funcion() {
@@ -358,13 +358,13 @@ public class Main {
 }
 ```
 
-## 📌 Heap (Montículo)
+##  Heap (Montículo)
 - Se usa para **asignación dinámica de memoria**.
 - Su tamaño es **mucho mayor** que el stack, pero su acceso es más lento.
 - La memoria debe **asignarse y liberarse manualmente** (en Java, el recolector de basura se encarga de liberar la memoria).
 - Puede fragmentarse si no se gestiona correctamente.
 
-### 🔹 Ejemplo en Java:
+###  Ejemplo en Java:
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -384,10 +384,10 @@ class Persona {
 
 Una clase puede definirse dentro de otra clase. La clase exterior se conoce como **clase padre**, y la clase dentro de ella es la **clase anidada**.
 
-## 📌 Tipos de Clases Anidadas
+##  Tipos de Clases Anidadas
 En Java, las clases anidadas se dividen en dos tipos principales:
 
-### 🔹 Clases Internas
+### Clases Internas
 Son clases definidas dentro de otra clase sin usar la palabra clave `static`. Tienen acceso a los miembros de la clase exterior, incluyendo los privados.
 
 #### **1. Clases Internas Normales**
@@ -452,8 +452,7 @@ public class Main {
     }
 }
 ```
-
-### 🔹 Clases Estáticas Anidadas
+###  Clases Estáticas Anidadas
 Son clases que se definen dentro de otra clase usando `static`. No tienen acceso directo a los miembros de la clase externa, a menos que sean estáticos.
 ```java
 class Externa {
@@ -471,7 +470,107 @@ public class Main {
     }
 }
 ```
+### Uso de enum en Java
+
+Son una clase que representa un conjunto de constantes en Java 
+
+```java
+enum Estado {
+    INICIADO, EN_PROGRESO, FINALIZADO
+}
+
+public class Tarea {
+    Estado estado;
+
+    public Tarea(Estado estado) {
+        this.estado = estado;
+    }
+
+    public void mostrarEstado() {
+        System.out.println("La tarea está: " + estado);
+    }
+
+    public static void main(String[] args) {
+        Tarea t = new Tarea(Estado.EN_PROGRESO);
+        t.mostrarEstado();
+    }
+}
+
+enum Nivel {
+    BAJO(1), MEDIO(2), ALTO(3);
+
+    private int prioridad;
+
+    Nivel(int prioridad) {
+        this.prioridad = prioridad;
+    }
+
+    public int getPrioridad() {
+        return prioridad;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Nivel n = Nivel.MEDIO;
+        System.out.println("Prioridad de MEDIO: " + n.getPrioridad());
+    }
+}
 
 
+```
+### Herencia 
+La herencia es un principio de la programación orientada a objetos (POO) que permite que una clase herede atributos y métodos de otra clase
 
+En Java:
+
+- Una clase puede extender otra clase mediante extends.
+
+- La clase que hereda se llama subclase o clase hija.
+
+- La clase de la cual se hereda se llama superclase o clase padre.
+
+La clase hija puede heredar, todos los atributos declarados previamente como protected o publicos, pero no los privados o estaticos.
+
+## Override (Sobreescritura de metodos)
+
+``` Java
+class Animal {
+    void hacerSonido() {
+        System.out.println("Sonido genérico");
+    }
+}
+
+class Gato extends Animal {
+    @Override
+    void hacerSonido() {
+        System.out.println("Miau");
+    }
+}
+```
+
+## Uso de Super
+
+``` Java
+class Animal {
+    Animal() {
+        System.out.println("Constructor de Animal");
+    }
+    void comer() {
+        System.out.println("Animal comiendo");
+    }
+}
+
+class Perro extends Animal {
+    Perro() {
+        super(); // Llama al constructor de Animal
+        System.out.println("Constructor de Perro");
+    }
+
+    void comer() {
+        super.comer(); // Llama al método de la clase         padre
+        System.out.println("Perro comiendo");
+    }
+}
+```
 
