@@ -4,6 +4,6 @@ public class MyMedicalAppointments {
 
 
         Patient patient = new Patient("Ale", "BBB@gmail.com");
-        System.out.println(patient);
+        System.out.println(patient); b
     }
 }
