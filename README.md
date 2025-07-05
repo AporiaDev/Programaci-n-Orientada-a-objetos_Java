@@ -574,3 +574,31 @@ class Perro extends Animal {
 }
 ```
 
+Una **clase abstracta** en Java es una clase que **no puede instanciarse directamente** y se utiliza como base para otras clases. Puede contener tanto **métodos abstractos** (sin implementación, que deben ser definidos por las subclases) como **métodos concretos** (con cuerpo). Los **métodos abstractos** obligan a las clases hijas a proporcionar una implementación específica, lo que permite definir un comportamiento común y estructurado en jerarquías de clases. Este enfoque se usa cuando varias clases comparten características generales, pero también requieren personalización en ciertos métodos.
+
+```java
+abstract class Animal {
+    abstract void hacerSonido(); // Método abstracto
+
+    void dormir() {
+        System.out.println("El animal está durmiendo.");
+    }
+}
+
+class Perro extends Animal {
+    @Override
+    void hacerSonido() {
+        System.out.println("Guau!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal miPerro = new Perro();
+        miPerro.hacerSonido(); // Guau!
+        miPerro.dormir();      // El animal está durmiendo.
+    }
+}
+```
+
+
